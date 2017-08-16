@@ -766,10 +766,10 @@
 // @section machine
 
 // Travel limits after homing (units are in mm)
-#define X_MIN_POS -33
+#define X_MIN_POS -6
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 177
+#define X_MAX_POS 214
 #define Y_MAX_POS 172
 #define Z_MAX_POS 200
 
@@ -963,7 +963,7 @@
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
 //#define MANUAL_X_HOME_POS 0
-#define MANUAL_X_HOME_POS -33
+#define MANUAL_X_HOME_POS -6
 //#define MANUAL_Y_HOME_POS 0
 //#define MANUAL_Z_HOME_POS 0
 
@@ -978,8 +978,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT 88 + 33    // X point for Z homing when homing all axis (G28).
-  #define Z_SAFE_HOMING_Y_POINT 86    // Y point for Z homing when homing all axis (G28).
+  #define Z_SAFE_HOMING_X_POINT (X_MAX_POS / 2) - X_MIN_POS    // X point for Z homing when homing all axis (G28).
+  #define Z_SAFE_HOMING_Y_POINT (Y_MAX_POS / 2) - Y_MIN_POS    // Y point for Z homing when homing all axis (G28).
 #endif
 
 // Homing speeds (mm/m)
