@@ -92,30 +92,31 @@
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
 // WM: updated for LCD adapter
-#define X_CS_PIN           42
+#define X_CS_PIN           63
 
 #define Y_STEP_PIN         60
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
 // WM: updated for LCD adapter
-#define Y_CS_PIN           44
+#define Y_CS_PIN           59
 
 #define Z_STEP_PIN         46
 #define Z_DIR_PIN          48
 #define Z_ENABLE_PIN       62
 // WM: updated for LCD adapter
-#define Z_CS_PIN           65
+#define Z_CS_PIN           40
 
 #define E0_STEP_PIN        26
 #define E0_DIR_PIN         28
 #define E0_ENABLE_PIN      24
 // WM: updated for LCD adapter
-#define E0_CS_PIN          66
+#define E0_CS_PIN          64
 
 #define E1_STEP_PIN        36
 #define E1_DIR_PIN         34
 #define E1_ENABLE_PIN      30
-#define E1_CS_PIN          64
+// WM: moved to usable location
+#define E1_CS_PIN          42
 
 
 #if ENABLED(HAVE_TMC2208)
@@ -252,7 +253,8 @@
 #define LED_PIN            13
 
 #ifndef FILWIDTH_PIN
-  #define FILWIDTH_PIN      5   // Analog Input on AUX2
+  // WM: moved this to an unused analog pin
+  #define FILWIDTH_PIN      11   // Analog Input on AUX2
 #endif
 
 // define digital pin 4 for the filament runout sensor. Use the RAMPS 1.4 digital input 4 on the servos connector
