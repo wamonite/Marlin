@@ -92,14 +92,16 @@
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
 #ifndef X_CS_PIN
-  #define X_CS_PIN         53
+  //#### moved to AUX2
+  #define X_CS_PIN         63 // 53
 #endif
 
 #define Y_STEP_PIN         60
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
 #ifndef Y_CS_PIN
-  #define Y_CS_PIN         49
+  //#### moved to AUX2
+  #define Y_CS_PIN         59 // 49
 #endif
 
 #define Z_STEP_PIN         46
@@ -113,14 +115,16 @@
 #define E0_DIR_PIN         28
 #define E0_ENABLE_PIN      24
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN        42
+  //#### moved to AUX2
+  #define E0_CS_PIN        64 // 42
 #endif
 
 #define E1_STEP_PIN        36
 #define E1_DIR_PIN         34
 #define E1_ENABLE_PIN      30
 #ifndef E1_CS_PIN
-  #define E1_CS_PIN        44
+  //#### moved to AUX2
+  #define E1_CS_PIN        42 // 44
 #endif
 
 /**
@@ -272,7 +276,8 @@
 #define LED_PIN            13
 
 #ifndef FILWIDTH_PIN
-  #define FILWIDTH_PIN      5   // Analog Input on AUX2
+  //#### moved to unused analog pin
+  #define FILWIDTH_PIN     11 // 5  // Analog Input on AUX2
 #endif
 
 // define digital pin 4 for the filament runout sensor. Use the RAMPS 1.4 digital input 4 on the servos connector
@@ -423,7 +428,8 @@
 
       #define BTN_ENC           35
       #define SD_DETECT_PIN     49
-      #define KILL_PIN          41
+      //#### seem to get intermittent kill signals with it enabled
+      #define KILL_PIN          -1 // 41
 
       #if ENABLED(BQ_LCD_SMART_CONTROLLER)
         #define LCD_BACKLIGHT_PIN 39
