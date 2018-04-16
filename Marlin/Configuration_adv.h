@@ -1173,7 +1173,7 @@
    * It is advised to set X/Y/Z_HOME_BUMP_MM to 0.
    * M914 X/Y/Z to live tune the setting
    */
-  //#### all the vidoes make this look so simple!
+  //#### finally got this working! http://forums.reprap.org/read.php?415,818705
   #define SENSORLESS_HOMING // TMC2130 only
 
   #if ENABLED(SENSORLESS_HOMING)
