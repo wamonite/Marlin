@@ -1100,7 +1100,7 @@
 
 // Homing speeds (mm/m)
 //#### reduce X and Y homing speed until sensorless homing working
-#define HOMING_FEEDRATE_XY (10*60) // (50*60)
+#define HOMING_FEEDRATE_XY (50*60) // (50*60)
 #define HOMING_FEEDRATE_Z  (3*60) // (4*60)
 
 // @section calibrate
