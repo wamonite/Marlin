@@ -804,7 +804,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true // false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -829,11 +829,11 @@
 
 // The size of the print bed
 #define X_BED_SIZE 214 // 200
-#define Y_BED_SIZE 172 // 200
+#define Y_BED_SIZE 198 // 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -6 // 0
-#define Y_MIN_POS 0
+#define X_MIN_POS -12 // 0
+#define Y_MIN_POS -54 // 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -849,8 +849,7 @@
  */
 
 // Min software endstops constrain movement within minimum coordinate bounds
-//#### disabled for now
-// #define MIN_SOFTWARE_ENDSTOPS
+#define MIN_SOFTWARE_ENDSTOPS
 #if ENABLED(MIN_SOFTWARE_ENDSTOPS)
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
@@ -858,8 +857,7 @@
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
-//#### disabled for now
-// #define MAX_SOFTWARE_ENDSTOPS
+#define MAX_SOFTWARE_ENDSTOPS
 #if ENABLED(MAX_SOFTWARE_ENDSTOPS)
   #define MAX_SOFTWARE_ENDSTOP_X
   #define MAX_SOFTWARE_ENDSTOP_Y
@@ -1077,8 +1075,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS -6 // 0
-//#define MANUAL_Y_HOME_POS 0
+#define MANUAL_X_HOME_POS -12 // 0
+#define MANUAL_Y_HOME_POS -54 // 0
 //#define MANUAL_Z_HOME_POS 0
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
