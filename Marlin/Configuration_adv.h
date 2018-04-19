@@ -1077,8 +1077,7 @@
   #define Y_CURRENT          600 // 800
   #define Y_MICROSTEPS        16
 
-  //#### dual Z stepper motors don't run < 1000
-  #define Z_CURRENT         1000 // 800
+  #define Z_CURRENT          800
   #define Z_MICROSTEPS        16
 
   #define X2_CURRENT         800
