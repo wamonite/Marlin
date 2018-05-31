@@ -388,10 +388,20 @@
   //#define DEFAULT_Ki 2.25
   //#define DEFAULT_Kd 440
 
-  // auto-tuned
-  #define  DEFAULT_Kp 17.85
-  #define  DEFAULT_Ki 1.40
-  #define  DEFAULT_Kd 57.03
+  // auto-tuned (ABS)
+  // #define  DEFAULT_Kp 17.85
+  // #define  DEFAULT_Ki 1.40
+  // #define  DEFAULT_Kd 57.03
+
+  // auto-tuned (PETG standard e3d nozzle)
+  // #define  DEFAULT_Kp 20.59
+  // #define  DEFAULT_Ki 1.51
+  // #define  DEFAULT_Kd 70.43
+
+  // auto-tuned (PETG copper-plated e3d nozzle)
+  #define DEFAULT_Kp 19.14
+  #define DEFAULT_Ki 1.42
+  #define DEFAULT_Kd 64.69
 #endif // PIDTEMP
 
 //===========================================================================
@@ -725,7 +735,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 33 // 10  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0 // 10  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.9 // 0   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -2.0 // 0   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
